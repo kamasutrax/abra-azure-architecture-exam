@@ -1,3 +1,5 @@
+<img width="1024" height="559" alt="Unknown" src="https://github.com/user-attachments/assets/5e64ffb0-e858-4316-b429-224f9f4b1fd8" />
+
 # Scalable Web Architecture on Azure
 
 ## Design Choices
