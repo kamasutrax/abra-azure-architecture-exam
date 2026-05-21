@@ -1,3 +1,5 @@
+<img width="1024" height="559" alt="Unknown" src="https://github.com/user-attachments/assets/7520d612-6d7f-41e0-9b85-337ca11f4406" />
+
 # Scalable Web Architecture on Azure
 
 ## Design Choices
@@ -20,7 +22,7 @@
    - An active Azure Subscription.
 
 2. **Initialization**:
-   terraform init
-   terraform validate
-   terraform plan
-   terraform apply
+   - terraform init
+   - terraform validate
+   - terraform plan
+   - terraform apply
