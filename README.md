@@ -4,7 +4,7 @@
 
 ## Design Choices
 * **Networking**: VNet tiers enforce strict isolation. NAT Gateway provides secure outbound-only internet access.
-* **Security**: 100% private ingress. APIM is deployed in Internal VNet mode, AppGW utilizes a private frontend IP, and NSGs restrict container traffic exclusively to AppGW.
+* **Security**: 100% private ingress. APIM is deployed in Internal VNet mode, AppGW utilizes a private frontend IP and NSGs restrict container traffic exclusively to AppGW.
 * **Compute**: Azure Container Apps Environment is VNet-injected and relies on a managed internal load balancer.
 
 ## Scaling for Production
