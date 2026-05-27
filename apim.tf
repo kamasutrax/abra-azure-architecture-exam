@@ -1,4 +1,4 @@
-# Public IP required for APIM in External VNet mode
+# IP for APIM in External VNet mode
 resource "azurerm_public_ip" "apim_pip" {
   name                = "pip-apim-exam"
   location            = azurerm_resource_group.rg.location
@@ -8,7 +8,7 @@ resource "azurerm_public_ip" "apim_pip" {
   zones               = ["1", "2"]
 }
 
-# API Management deployed in External mode for user ingress
+# API Management user ingress
 resource "azurerm_api_management" "apim" {
   name                 = "apim-exam-gw"
   location             = azurerm_resource_group.rg.location
@@ -27,7 +27,7 @@ resource "azurerm_api_management" "apim" {
   zones = ["1", "2"]
 }
 
-# API configuration routing traffic to the Application Gateway, enforcing HTTPS
+# API routing traffic to the Application Gateway, enforcing HTTPS
 resource "azurerm_api_management_api" "api" {
   name                = "hello-api"
   resource_group_name = azurerm_resource_group.rg.name
