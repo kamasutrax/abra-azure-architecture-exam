@@ -3,9 +3,9 @@
 # Scalable Web Architecture on Azure
 
 ## Design Choices
-* **Networking**: VNet tiers enforce strict isolation. NAT Gateway provides secure outbound-only internet access.
-* **Security**: 100% private ingress. APIM is deployed in Internal VNet mode, AppGW utilizes a private frontend IP and NSGs restrict container traffic exclusively to AppGW.
-* **Compute**: Azure Container Apps Environment is VNet-injected and relies on a managed internal load balancer.
+* **Networking:** VNet tiers enforce strict isolation. 3 private subnets were provisioned (exceeding the minimum of 2) as APIM, AppGW, and ACA each strictly require dedicated subnets. NAT Gateway provides secure outbound-only internet access.
+* **Security:** APIM is deployed in `External` VNet mode to allow external user traffic while maintaining internal routing to the backend. Ingress protocol at the APIM layer is restricted to HTTPS.
+* **Compute:** Azure Container Apps Environment is VNet-injected and relies on a managed internal load balancer.
 
 ## Scaling for Production
 
